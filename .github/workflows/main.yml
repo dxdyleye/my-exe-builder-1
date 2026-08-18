@@ -22,10 +22,10 @@ jobs:
         pip install pyinstaller pandas openpyxl python-docx
 
     - name: 打包成 EXE
-      run: pyinstaller --onefile --console script.py
+      run: pyinstaller --onefile --console 日报制作.py
 
     - name: 上传打包好的 EXE
       uses: actions/upload-artifact@v4
       with:
         name: windows-exe
-        path: dist/script.exe
+        path: dist/日报制作.exe
